@@ -7,6 +7,13 @@
  */
 
 import React from 'react';
+
+import Chat from './app/routes/Chat';
+
+import Stories from './app/routes/Stories';
+import Me from './app/routes/Me';
+import Menu from './app/components/Menu';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,50 +31,32 @@ import {
 
 import {Camera} from './Camera';
 
+const SubMenu = () => (
+  <Menu
+    routes={[
+      { component: Me },
+      { component: Camera }
+    ]}
+    initialIndex={1}
+    horizontal={false}
+  />
+);
+
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-      <Camera style={{flex: 1}}/>
+     
+      <Menu
+      routes={[
+        { component: Chat },
+        { component: SubMenu },
+        { component: Stories },
+      ]}
+      initialIndex={1}/>
     </>
   );
 };
+
 
 const styles = StyleSheet.create({
   scrollView: {
