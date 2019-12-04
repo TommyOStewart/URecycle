@@ -11,7 +11,6 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import {RNCamera} from 'react-native-camera';
-
 import BarcodeMask from 'react-native-barcode-mask';
 
 export class Camera extends Component {
