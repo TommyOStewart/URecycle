@@ -102,3 +102,15 @@ const styles = StyleSheet.create({
     
   }
 });
+const AppNavigator = createStackNavigator({
+  
+  Home: Login,
+  Details: App,
+  Setup: SignUp
+},
+{
+  initialRouteName: 'Home',
+
+});
+
+export default createAppContainer(AppNavigator);
