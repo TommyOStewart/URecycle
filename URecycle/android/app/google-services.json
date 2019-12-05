@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "611962352865",
+    "firebase_url": "https://urecycle-83c98.firebaseio.com",
+    "project_id": "urecycle-83c98",
+    "storage_bucket": "urecycle-83c98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611962352865:android:7677815d4ad93c9ece73a0",
+        "android_client_info": {
+          "package_name": "com.urecycle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611962352865-0p2pvcntg3efmf4g23u23r0a7p4d3jkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcAaoU3foQVEY5Lr6jbrUZB2bzKhEhDa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611962352865-0p2pvcntg3efmf4g23u23r0a7p4d3jkh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

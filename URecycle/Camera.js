@@ -11,7 +11,6 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import {RNCamera} from 'react-native-camera';
-
 import BarcodeMask from 'react-native-barcode-mask';
 
 export class Camera extends Component {
@@ -23,12 +22,14 @@ export class Camera extends Component {
         }
     }
 
-    onBarCodeRead(scanResult) {
+    async onBarCodeRead(scanResult) {
         if (scanResult.data != null) {
-            console.log(scanResult.data);
+            
             this.setState({myText: scanResult.data});
         }
     };
+
+
 
     styles = StyleSheet.create({
         scrollView: {
