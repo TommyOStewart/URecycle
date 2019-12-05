@@ -54,11 +54,16 @@ class CameraRoute extends Component {
   takePicture() {
     this.camera.capture()
       .then((data) => {
+
         console.log(data);
-        this.setState({ path: data.path })
+        this.setState({ path: data.path });
+
       })
       .catch(err => console.error(err));
   }
+
+
+
 
   renderCamera() {
     return (
