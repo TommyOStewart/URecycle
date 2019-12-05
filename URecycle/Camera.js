@@ -12,7 +12,7 @@ import {
 
 import {RNCamera} from 'react-native-camera';
 import BarcodeMask from 'react-native-barcode-mask';
-import firestore from "@react-native-firebase/firestore";
+import {checkUser} from "./Database";
 
 export class Camera extends Component {
 
@@ -23,10 +23,10 @@ export class Camera extends Component {
         }
     }
 
-    onBarCodeRead(scanResult) {
+    async onBarCodeRead(scanResult) {
         if (scanResult.data != null) {
 
-            let res = Camera.checkUser('testUser', 'password');
+            let res = await checkUser('testUser', 'password1');
 
             console.log("RESULT: ", res);
 
@@ -37,20 +37,7 @@ export class Camera extends Component {
         }
     };
 
-    static async checkUser(user, password) {
 
-        // Read the document for user 'Ada Lovelace':
-        const documentSnapshot = await firestore()
-            .collection('users')
-            .doc(user)
-            .get();
-
-        console.log('Username', documentSnapshot.data().username);
-        console.log('Password', documentSnapshot.data().password);
-
-        return documentSnapshot.data().username === user && documentSnapshot.data().password === password;
-
-    }
 
     styles = StyleSheet.create({
         scrollView: {
