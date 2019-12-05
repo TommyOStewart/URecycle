@@ -13,6 +13,8 @@ import Chat from './app/routes/Chat';
 import Stories from './app/routes/Stories';
 import Me from './app/routes/Me';
 import Menu from './app/components/Menu';
+import SignUp from './DanStuff/SignUp'
+
 
 import {
   SafeAreaView,
@@ -21,6 +23,12 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
+  TextInput,
+  KeyboardAvoidingView,
+  TouchableOpacity,
+  Image,
+  Alert
 } from 'react-native';
 
 import {
@@ -29,7 +37,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+
 import {Camera} from './Camera';
+
+
+
+
 
 const SubMenu = () => (
   <Menu
@@ -42,10 +57,67 @@ const SubMenu = () => (
   />
 );
 
+
+
+ class Login extends React.Component {
+
+  state = {username: "", password: ""};
+
+
+
+  checkLogin() {
+    var {username, password} = this.state
+    console.warn(username, password);
+    if(username= 'admin' && password == 'admin'){
+      //redirect
+      this.props.navigation.navigate('Details')
+    }
+    else{
+      //alert
+      Alert.alert('Error', 'username',[{
+        text:'Okay'
+      }])
+      
+    }
+  }
+
+  render() {
+    //const { heading, input, parent} = styles
+    return (
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
+        <Image style={styles.logo} source={require('./DanStuff/test.png')} />
+        <TextInput
+        placeholder="Username"
+        placeholderTextColor="rgba(0, 102, 34,0.7)"
+        returnKeyType="Next"
+        onSubmitEditing={() => this.passwordInput.focus()}
+        keyboardType="email-address"
+        autoCapitalize="none"
+        autoCorrect={false}
+        style={styles.input}
+        onChangeText={text => this.setState({password: text})}
+        />
+        <TextInput
+        placeholder="Password"
+        placeholderTextColor="rgba(0, 102, 34,0.7)"
+        returnKeyType="Go"
+        ref = {(input) => this.passwordInput = input}
+        secureTextEntry
+        style={styles.input}
+        onChangeText={text => this.setState({username: text})}
+        />        
+        <TouchableOpacity style={styles.Loginbutton}>
+        <Button title={'Login'} onPress={_ => this.checkLogin()} /> 
+        <Button title={'SignUp'} onPress={this.props.navigation.navigate('Signup')}/>
+        </TouchableOpacity>
+      </KeyboardAvoidingView>
+    );
+  }
+}
+
 const App: () => React$Node = () => {
   return (
-    <>
-     
+    <>     
       <Menu
       routes={[
         { component: Chat },
@@ -56,6 +128,8 @@ const App: () => React$Node = () => {
     </>
   );
 };
+
+
 
 
 const styles = StyleSheet.create({
@@ -97,4 +171,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+const AppNavigator = createStackNavigator({
+  
+    Home: Login,
+    Details: App,
+    Setup: SignUp
+  },
+  {
+    initialRouteName: 'Home',
+  
+});
+
+export default createAppContainer(AppNavigator);

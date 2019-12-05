@@ -5,7 +5,7 @@ export default class Signup extends React.Component {
   render() {
     return (
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
-        <Image style={styles.logo} source={require('../assets/test.png')}/>
+        <Image style={styles.logo} source={require('../DanStuff/test.png')}/>
         <TextInput
         placeholder="Username"
         placeholderTextColor="rgba(0, 102, 34,0.7)"
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
 
   SignUpbutton: {
-    textAllign: 'right',
+    textAlign: 'right',
     backgroundColor: '#00b33c',
     margin: 5,
     paddingVertical: 10,
@@ -77,6 +77,6 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: 'center',
     fontWeight: '500',
-    Color: '#00b33c'
+    color: '#00b33c'
   }
 });
