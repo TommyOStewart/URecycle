@@ -15,7 +15,7 @@ import Me from './app/routes/Me';
 import Menu from './app/components/Menu';
 //import Signup from './DanStuff/SignUp'
 
-import {checkUser} from "./Database";
+import {checkUser, addNewUser} from "./Database";
 
 import {
   SafeAreaView,
@@ -62,9 +62,7 @@ const SubMenu = () => (
 
  class Login extends React.Component {
 
-  state = {username: "", password: ""};
-
-
+  state = {username: "", password: "", passAgain: ""};
 
   async checkLogin() {
     var {username, password} = this.state;
@@ -81,6 +79,8 @@ const SubMenu = () => (
 
     }
   }
+
+
 
   render() {
     //const { heading, input, parent} = styles
@@ -117,6 +117,31 @@ const SubMenu = () => (
 }
 
 class Signup extends React.Component {
+
+
+    async createUser() {
+        var {username, password, passAgain} = this.state;
+
+        if (password !==  passAgain) {
+            Alert.alert('Error', 'Password Mismatch',[{
+                text:'Okay'
+            }]);
+            return;
+        }
+
+        if(await addNewUser(username, password)){
+            //redirect
+            this.props.navigation.navigate('Details');
+        }
+        else{
+            //alert
+            Alert.alert('Error', 'User already exists',[{
+                text:'Okay'
+            }])
+
+        }
+    }
+
   render() {
     return (
       <KeyboardAvoidingView behavior="padding" style={styles3.container}>
@@ -130,13 +155,14 @@ class Signup extends React.Component {
         autoCapitalize="none"
         autoCorrect={false}
         style={styles3.input}
+        onChangeText={text => this.setState({username: text})}
         />
         <TextInput
         placeholder="Password"
         placeholderTextColor="rgba(0, 102, 34,0.7)"
         returnKeyType="next"
         ref = {(input) => this.passwordInput= input}
-
+        onChangeText={text => this.setState({password: text})}
         style={styles3.input}
         />
 
@@ -146,10 +172,12 @@ class Signup extends React.Component {
         returnKeyType="go"
         ref = {(input) => this.passwordInput= input}
         style={styles3.input}
+        onChangeText={text => this.setState({passAgain: text})}
         />
 
         <TouchableOpacity style={styles3.SignUpbutton}>
-        <Text style={styles3.buttonText}>SignUp</Text>
+            <Button title={'Sign up'} onPress={_ => this.createUser()} />
+        {/*<Text style={styles3.buttonText}>SignUp</Text>*/}
         </TouchableOpacity>
 
         <TouchableOpacity style={styles3.SignUpbutton}>
