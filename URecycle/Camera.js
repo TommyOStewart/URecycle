@@ -12,7 +12,6 @@ import {
 
 import {RNCamera} from 'react-native-camera';
 import BarcodeMask from 'react-native-barcode-mask';
-import {checkUser} from "./Database";
 
 export class Camera extends Component {
 
@@ -25,14 +24,7 @@ export class Camera extends Component {
 
     async onBarCodeRead(scanResult) {
         if (scanResult.data != null) {
-
-            let res = await checkUser('testUser', 'password1');
-
-            console.log("RESULT: ", res);
-
-
-
-            //console.log(scanResult.data);
+            
             this.setState({myText: scanResult.data});
         }
     };
