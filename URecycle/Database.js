@@ -23,12 +23,19 @@ export async function addNewUser(user, password) {
 // let correctCombo = await checkUser('admin', 'pass');
 export async function checkUser(user, password) {
 
+    console.log("Checking User");
+
     const documentSnapshot = await firestore()
         .collection('users').doc(user).get();
+
+    console.log(documentSnapshot.data());
 
     if (documentSnapshot.exists === false) {
         return false;
     }
+
+    console.log(documentSnapshot.data().username);
+    console.log(documentSnapshot.data().password);
 
     return documentSnapshot.data().username === user && documentSnapshot.data().password === password;
 

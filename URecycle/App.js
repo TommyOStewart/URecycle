@@ -15,7 +15,7 @@ import Me from './app/routes/Me';
 import Menu from './app/components/Menu';
 //import Signup from './DanStuff/SignUp'
 
-
+import {checkUser} from "./Database";
 
 import {
   SafeAreaView,
@@ -66,10 +66,10 @@ const SubMenu = () => (
 
 
 
-  checkLogin() {
-    var {username, password} = this.state
+  async checkLogin() {
+    var {username, password} = this.state;
     console.warn(username, password);
-    if(username= 'admin' && password == 'admin'){
+    if(await checkUser(username, password)){
       //redirect
       this.props.navigation.navigate('Details')
     }
@@ -78,7 +78,7 @@ const SubMenu = () => (
       Alert.alert('Error', 'username',[{
         text:'Okay'
       }])
-      
+
     }
   }
 
@@ -90,25 +90,25 @@ const SubMenu = () => (
         <TextInput
         placeholder="Username"
         placeholderTextColor="rgba(0, 102, 34,0.7)"
-        returnKeyType="Next"
+        returnKeyType="next"
         onSubmitEditing={() => this.passwordInput.focus()}
         keyboardType="email-address"
         autoCapitalize="none"
         autoCorrect={false}
         style={styles2.input}
-        onChangeText={text => this.setState({password: text})}
+        onChangeText={text => this.setState({username: text})}
         />
         <TextInput
         placeholder="Password"
         placeholderTextColor="rgba(0, 102, 34,0.7)"
-        returnKeyType="Go"
+        returnKeyType="go"
         ref = {(input) => this.passwordInput = input}
         secureTextEntry
         style={styles2.input}
-        onChangeText={text => this.setState({username: text})}
-        />        
+        onChangeText={text => this.setState({password: text})}
+        />
         <TouchableOpacity style={styles2.Loginbutton}>
-        <Button title={'Login'} onPress={_ => this.checkLogin()} /> 
+        <Button title={'Login'} onPress={_ => this.checkLogin()} />
         <Button title={'SignUp'} onPress={_ => this.props.navigation.navigate('Setup')}/>
         </TouchableOpacity>
       </KeyboardAvoidingView>
@@ -124,7 +124,7 @@ class Signup extends React.Component {
         <TextInput
         placeholder="Username"
         placeholderTextColor="rgba(0, 102, 34,0.7)"
-        returnKeyType="Next"
+        returnKeyType="next"
         onSubmitEditing={() => this.passwordInput.focus()}
         keyboardType="email-address"
         autoCapitalize="none"
@@ -134,7 +134,7 @@ class Signup extends React.Component {
         <TextInput
         placeholder="Password"
         placeholderTextColor="rgba(0, 102, 34,0.7)"
-        returnKeyType="Next"
+        returnKeyType="next"
         ref = {(input) => this.passwordInput= input}
 
         style={styles3.input}
@@ -143,7 +143,7 @@ class Signup extends React.Component {
         <TextInput
         placeholder="Password Again"
         placeholderTextColor="rgba(0, 102, 34,0.7)"
-        returnKeyType="Go"
+        returnKeyType="go"
         ref = {(input) => this.passwordInput= input}
         style={styles3.input}
         />
@@ -166,7 +166,7 @@ const styles3 = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 10,
-    
+
   },
   input: {
     height: 50,
@@ -188,7 +188,7 @@ const styles3 = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20
   },
-  
+
   buttonText: {
     textAlign: 'center',
     fontWeight: '500',
@@ -198,7 +198,7 @@ const styles3 = StyleSheet.create({
 
 const App: () => React$Node = () => {
   return (
-    <>     
+    <>
       <Menu
       routes={[
         { component: Chat },
@@ -224,7 +224,7 @@ const styles2 = StyleSheet.create({
     paddingHorizontal: 10
   },
   logo: {
-    height: 128,
+    height: 256,
     width: 256,
   },
   Loginbutton: {
@@ -235,7 +235,7 @@ const styles2 = StyleSheet.create({
   buttonText: {
     textAlign: 'center',
     fontWeight: '900',
-    
+
   }
 });
 
@@ -282,14 +282,14 @@ const styles = StyleSheet.create({
 });
 
 const AppNavigator = createStackNavigator({
-  
+
     Home: Login,
     Details: App,
     Setup: Signup
   },
   {
     initialRouteName: 'Home',
-  
+
 });
 
 export default createAppContainer(AppNavigator);
