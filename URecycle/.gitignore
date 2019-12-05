@@ -30,6 +30,8 @@ local.properties
 *.iml
 .idea/workspace.xml
 
+node_modules/
+
 # node.js
 #
 node_modules/
