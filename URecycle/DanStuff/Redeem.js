@@ -71,13 +71,15 @@ export default class Redeem extends React.Component {
         }
     }
 
+    goBack(){
 
+    }
 
 
     render() {
         return (
 
-            <ScrollView style={styles.container}>
+            <ScrollView contentContainerStyle={styles.container}>
 
                 <Image style={styles.image} source={require('./hat.png')}/>
                 <Text style={styles.text}>
@@ -192,8 +194,15 @@ export default class Redeem extends React.Component {
                 </Modal>
 
                 <TouchableOpacity style={styles.backbutton}>
-                    <Text style={styles.buttonText}>Back</Text>
+                    <Button style={styles.buttonText} onPress={this.goBack()} title={'Back'}/>
                 </TouchableOpacity>
+
+                {/*Bottom Buffer Text*/}
+                <Text style={styles.text}>
+
+
+
+                </Text>
 
             </ScrollView>
         );
@@ -201,7 +210,10 @@ export default class Redeem extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    container: {},
+    container: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     image: {
         resizeMode: 'contain',
         height: 256,
@@ -224,6 +236,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         textAlign: 'center',
-        color: '#00b33c'
+        fontWeight: '900',
+        // color: '#00b33c'
     }
 });

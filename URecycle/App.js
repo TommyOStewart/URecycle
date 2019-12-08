@@ -8,7 +8,7 @@
 
 import React from 'react';
 
-import Chat from './app/routes/Chat';
+import Stories from './app/routes/Stories';
 
 import Me from './app/routes/Me';
 import Menu from './app/components/Menu';
@@ -238,11 +238,11 @@ class App extends React.Component {
         return (
       <Menu
           routes={[
-              {component: Chat},
-              {component: SubMenu},
               {component: Redeem},
+              {component: SubMenu},
+              {component: Stories},
           ]}
-          initialIndex={1}
+          initialIndex={2}
           username={this.props.navigation.state.params.username}/>
         );
   }
