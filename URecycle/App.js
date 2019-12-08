@@ -17,6 +17,7 @@ import Menu from './app/components/Menu';
 
 import {checkUser, addNewUser} from "./Database";
 
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -40,10 +41,7 @@ import {
 
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-
 import {Camera} from './Camera';
-
-
 
 
 
@@ -59,7 +57,6 @@ const SubMenu = () => (
 );
 
 
-
  class Login extends React.Component {
 
   state = {username: "", password: "", passAgain: ""};
@@ -67,6 +64,7 @@ const SubMenu = () => (
   async checkLogin() {
     var {username, password} = this.state;
     console.warn(username, password);
+
     if(await checkUser(username, password)){
       //redirect
       this.props.navigation.navigate('Details')

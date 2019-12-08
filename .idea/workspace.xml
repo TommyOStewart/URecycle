@@ -2,103 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bbe383a-de91-4e1c-8f10-7ab9bf96b226" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URecycle/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URecycle/Database.js" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/Database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URecycle/Camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/Camera.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URecycle/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URecycle/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URecycle/ios/URecycle.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/ios/URecycle.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URecycle/android/app/src/main/java/com/urecycle/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/android/app/src/main/java/com/urecycle/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URecycle/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URecycle/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URecycle/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URecycle/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URecycle/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/URecycle/yarn.lock" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/URecycle/Camera.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/URecycle/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/URecycle/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/URecycle/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="2462" selection-start-line="2462" selection-end-line="2462" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/URecycle/ios/Podfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/URecycle/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/URecycle/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1426">
-              <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-              <folding>
-                <element signature="e#103#129#0" expanded="true" />
-                <element signature="e#332#378#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/URecycle/Database.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,58 +28,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/URecycle/index.js" />
-        <option value="$PROJECT_DIR$/URecycle/android/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/URecycle/ios/URecycle/Info.plist" />
-        <option value="$PROJECT_DIR$/URecycle/android/build.gradle" />
-        <option value="$PROJECT_DIR$/URecycle/android/app/build.gradle" />
-        <option value="$PROJECT_DIR$/URecycle/routes/Stories.js" />
-        <option value="$PROJECT_DIR$/URecycle/routes/Camera.js" />
-        <option value="$PROJECT_DIR$/URecycle/Camera.js" />
-        <option value="$PROJECT_DIR$/URecycle/.gitignore" />
-        <option value="$PROJECT_DIR$/URecycle/package.json" />
-        <option value="$PROJECT_DIR$/URecycle/Database.js" />
-        <option value="$PROJECT_DIR$/URecycle/App.js" />
-      </list>
-    </option>
-  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="807" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="URecycle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="URecycle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="URecycle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="URecycle" type="462c0819:PsiDirectoryNode" />
-              <item name="URecycle" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1UfSMWnb4NXM4u5zx4aCCaqX9rc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -180,7 +57,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="C:\Users\cheng\Documents\GitHub\URecycle\URecycle\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -188,15 +65,25 @@
       <recent name="$PROJECT_DIR$/URecycle" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="Camera.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/URecycle/Camera.js" working-dir="$PROJECT_DIR$/URecycle">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Node.js.Camera.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -217,35 +104,9 @@
       <workItem from="1575380619819" duration="768000" />
       <workItem from="1575429058794" duration="2646000" />
       <workItem from="1575508222936" duration="3869000" />
+      <workItem from="1575746116004" duration="17210000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26487000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="807" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295129" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32904148" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -253,155 +114,78 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.gradle" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/URecycle/android/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/node_modules/react-native-camera/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8518">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="2462" selection-start-line="2462" selection-end-line="2462" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/.eslintrc.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/routes/Chat.js" />
-    <entry file="file://$PROJECT_DIR$/URecycle/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4368">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/ios/URecycle/Info.plist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/DanStuff/test.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/DanStuff/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/node_modules/@react-native-firebase/firestore/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="244" selection-start-line="244" selection-end-line="244" selection-end-column="74" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/routes/Stories.js" />
-    <entry file="file://$PROJECT_DIR$/URecycle/routes/Me.js" />
-    <entry file="file://$PROJECT_DIR$/URecycle/routes/Camera.js" />
-    <entry file="file://$PROJECT_DIR$/URecycle/ios/Podfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/node_modules/acorn-jsx/node_modules/.bin/acorn">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/node_modules/acorn-jsx/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/Database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/Camera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/URecycle/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1426">
-          <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-          <folding>
-            <element signature="e#103#129#0" expanded="true" />
-            <element signature="e#332#378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575784175226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575784175226" />
+    <state width="1899" height="326" key="GridCell.Tab.0.bottom" timestamp="1575780875488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875488" />
+    <state width="1899" height="326" key="GridCell.Tab.0.center" timestamp="1575780875488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875488" />
+    <state width="1899" height="326" key="GridCell.Tab.0.left" timestamp="1575780875488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875488" />
+    <state width="1899" height="326" key="GridCell.Tab.0.right" timestamp="1575780875488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875488" />
+    <state width="1899" height="326" key="GridCell.Tab.1.bottom" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.1.center" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.1.left" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.1.right" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.2.bottom" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.2.center" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.2.left" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.2.right" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.3.bottom" timestamp="1575780875490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875490" />
+    <state width="1899" height="326" key="GridCell.Tab.3.center" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.3.left" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state width="1899" height="326" key="GridCell.Tab.3.right" timestamp="1575780875489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="326" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575780875489" />
+    <state x="646" y="101" width="627" height="837" key="find.popup" timestamp="1575781013402">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="646" y="101" width="627" height="837" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575781013402" />
   </component>
 </project>

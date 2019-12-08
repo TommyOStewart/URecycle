@@ -184,6 +184,7 @@ android {
 apply plugin: 'com.android.application'
 
 dependencies {
+    implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-camera')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
