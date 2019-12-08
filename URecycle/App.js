@@ -13,18 +13,13 @@ import Chat from './app/routes/Chat';
 import Stories from './app/routes/Stories';
 import Me from './app/routes/Me';
 import Menu from './app/components/Menu';
-//import Signup from './DanStuff/SignUp'
 
 import {checkUser, addNewUser} from "./Database";
 
 
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
   Text,
-  StatusBar,
   Button,
   TextInput,
   KeyboardAvoidingView,
@@ -34,10 +29,8 @@ import {
 } from 'react-native';
 
 import {
-  Header,
   Colors,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  } from 'react-native/Libraries/NewAppScreen';
 
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
@@ -45,16 +38,28 @@ import {Camera} from './Camera';
 
 
 
-const SubMenu = () => (
-  <Menu
-    routes={[
-      { component: Me },
-      { component: Camera }
-    ]}
-    initialIndex={1}
-    horizontal={false}
-  />
-);
+class SubMenu extends React.Component {
+
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        return (
+            <Menu
+                routes={[
+                    {component: Me},
+                    {component: Camera}
+                ]}
+                initialIndex={1}
+                horizontal={false}
+                username={this.props.username}
+            />
+        );
+    }
+
+}
+
 
 
  class Login extends React.Component {
@@ -63,11 +68,10 @@ const SubMenu = () => (
 
   async checkLogin() {
     var {username, password} = this.state;
-    console.warn(username, password);
 
     if(await checkUser(username, password)){
       //redirect
-      this.props.navigation.navigate('Details')
+      this.props.navigation.navigate('Details', {username: username})
     }
     else{
       //alert
@@ -222,19 +226,27 @@ const styles3 = StyleSheet.create({
   }
 });
 
-const App: () => React$Node = () => {
-  return (
-    <>
+class App extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+    }
+
+
+  render() {
+        return (
       <Menu
-      routes={[
-        { component: Chat },
-        { component: SubMenu },
-        { component: Stories },
-      ]}
-      initialIndex={1}/>
-    </>
-  );
-};
+          routes={[
+              {component: Chat},
+              {component: SubMenu},
+              {component: Stories},
+          ]}
+          initialIndex={1}
+          username={this.props.navigation.state.params.username}/>
+        );
+  }
+}
 
 const styles2 = StyleSheet.create({
   container: {
