@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+package-lock.json
 
 # Xcode
 #
@@ -60,3 +61,5 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+
