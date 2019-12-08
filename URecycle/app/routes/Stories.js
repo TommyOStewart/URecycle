@@ -1,6 +1,22 @@
 import React, {Component} from 'react';
-import {StyleSheet, TouchableOpacity, Image, Text, View, Linking, ScrollView} from 'react-native';
+import {StyleSheet, TouchableOpacity, Image, Text, Linking, ScrollView} from 'react-native';
+import {setPoints} from "../../Database.js";
 export default class Stories extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+        myText: 'None',
+        acceptModal: false,
+        declineModal: false
+    }
+}
+
+onPress = async() => {
+  this.setState({
+    acceptModal: true
+})
+  await setPoints(this.props.username, await getPoints(this.props.username) + 5)
+}
   render(){
     return(
       <ScrollView style={styles.container}>
