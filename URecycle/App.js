@@ -10,11 +10,11 @@ import React from 'react';
 
 import Chat from './app/routes/Chat';
 
-import Stories from './app/routes/Stories';
 import Me from './app/routes/Me';
 import Menu from './app/components/Menu';
 
 import {checkUser, addNewUser} from "./Database";
+import Redeem from './DanStuff/Redeem';
 
 
 import {
@@ -240,7 +240,7 @@ class App extends React.Component {
           routes={[
               {component: Chat},
               {component: SubMenu},
-              {component: Stories},
+              {component: Redeem},
           ]}
           initialIndex={1}
           username={this.props.navigation.state.params.username}/>
@@ -323,7 +323,7 @@ const AppNavigator = createStackNavigator({
 
     Home: Login,
     Details: App,
-    Setup: Signup
+    Setup: Signup,
   },
   {
     initialRouteName: 'Home',

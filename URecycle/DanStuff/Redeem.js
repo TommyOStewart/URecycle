@@ -6,8 +6,8 @@ export default class Redeem extends React.Component {
     return (
 
       <ScrollView style={styles.container}>
-        
-        <Image style={styles.image} source={require('../assets/hat.png')} />
+
+        <Image style={styles.image} source={require('./hat.png')} />
         <Text style={styles.text}>
         A *Really* Cool hat
         </Text>
@@ -15,15 +15,15 @@ export default class Redeem extends React.Component {
         <Text style={styles.buttonText}>Redeem</Text>
         </TouchableOpacity>
 
-        <Image style={styles.image} source={require('../assets/discount.png')} />
+        <Image style={styles.image} source={require('./discount.png')} />
         <Text style={styles.text}>
         Select Store Discounts*
         </Text>
         <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Redeem</Text>
         </TouchableOpacity>
-        
-        <Image style={styles.image} source={require('../assets/giftcard.png')} />
+
+        <Image style={styles.image} source={require('./giftcard.png')} />
         <Text style={styles.text}>
         Select Store Giftcards*
         </Text>
@@ -31,7 +31,7 @@ export default class Redeem extends React.Component {
         <Text style={styles.buttonText}>Redeem</Text>
         </TouchableOpacity>
 
-        <Image style={styles.image} source={require('../assets/raffle.png')} />
+        <Image style={styles.image} source={require('./raffle.png')} />
         <Text style={styles.text}>
         Raffle Entry
         </Text>
@@ -42,7 +42,7 @@ export default class Redeem extends React.Component {
         <TouchableOpacity style={styles.backbutton}>
         <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
-        
+
       </ScrollView>
     );
   }
@@ -50,7 +50,6 @@ export default class Redeem extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
   },
     image: {
     resizeMode: 'contain',
@@ -74,7 +73,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    fontWeight: '1000',
-    Color: '#00b33c'
+    color: '#00b33c'
   }
 });
