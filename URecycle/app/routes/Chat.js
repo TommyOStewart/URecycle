@@ -11,14 +11,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const Chat = () => {
+const Chat = (props) => {
+
   return (
     <View style={styles.container}>
-    <Text>Chat</Text>
+    <Text>Hello - {props.username}</Text>
   </View>
   );
 };
 
 
- 
+
 export default Chat;

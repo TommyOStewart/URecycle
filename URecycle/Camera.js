@@ -21,8 +21,8 @@ import ModalButton from "react-native-modals/dist/components/ModalButton";
 
 export class Camera extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             myText: 'None',
             acceptModal: false,
@@ -33,7 +33,9 @@ export class Camera extends Component {
 
     async onBarCodeRead(scanResult) {
         if (scanResult.data != null) {
-            
+
+            console.log("CAMERA:", this.props.username);
+
             this.setState({myText: scanResult.data});
             if(await checkRecyclable(scanResult.data)){
                 this.setState({

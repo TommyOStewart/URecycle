@@ -77,3 +77,38 @@ export async function checkRecyclable(barcode) {
 
     return documentSnapshot.data().recyclable === true;
 }
+
+// import {addRecyclable} from "Path/To/Database.js";
+// let added = await addRecyclable('0025000058011', 'Lemonade', true);
+export async function addRecyclable(barcode, name, isRecyclable) {
+
+    const documentSnapshot = await firestore()
+        .collection('recyclables').doc(barcode).get();
+
+    if (documentSnapshot.exists === true) {
+        return false;
+    }
+
+    await firestore()
+        .collection('recyclables').doc(barcode).set({name: name, recyclable: isRecyclable});
+
+    return true;
+}
+
+// import {setIsRecyclable} from "Path/To/Database.js";
+// let set = await setIsRecyclable('0025000058011', false);
+export async function setIsRecyclable(barcode, isRecyclable) {
+
+    const documentSnapshot = await firestore()
+        .collection('recyclables').doc(barcode).get();
+
+    if (documentSnapshot.exists === false) {
+        return false;
+    }
+
+    await firestore()
+        .collection('recyclables').doc(barcode).set({recyclable: isRecyclable});
+
+    return true;
+}
+

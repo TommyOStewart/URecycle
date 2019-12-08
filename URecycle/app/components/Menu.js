@@ -28,6 +28,8 @@ const styles = StyleSheet.create({
 
 class Menu extends Component {
 
+
+
   static propTypes = {
     routes: PropTypes.array,
     horizontal: PropTypes.bool,
@@ -43,6 +45,7 @@ class Menu extends Component {
   constructor(props) {
     super(props);
     this._scrollView = null;
+
   }
 
   componentDidMount() {
@@ -62,7 +65,7 @@ class Menu extends Component {
     return this.props.routes.map((route, index) => {
       return (
         <View key={index} style={itemStyle}>
-          <route.component />
+          <route.component username={this.props.username}/>
         </View>
       );
     });
