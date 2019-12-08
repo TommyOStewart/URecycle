@@ -133,7 +133,7 @@ class Signup extends React.Component {
 
         if(await addNewUser(username, password)){
             //redirect
-            this.props.navigation.navigate('Details');
+            this.props.navigation.navigate('Details', {username: username});
         }
         else{
             //alert

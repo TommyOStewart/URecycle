@@ -56,10 +56,16 @@ export async function getPoints(user) {
 // let newPoints = await setPoints('admin', 100);
 export async function setPoints(user, amt) {
 
-    const documentSnapshot = await firestore()
-        .collection('users').doc(user).set({points: amt});
+    const before = await firestore()
+        .collection('users').doc(user).get();
 
-    return documentSnapshot.data().points;
+    const documentSnapshot = await firestore()
+        .collection('users').doc(user).set({username: before.data().username, password: before.data().password, points: amt});
+
+    const after = await firestore()
+        .collection('users').doc(user).get();
+
+    return after.data().points;
 
 }
 
@@ -107,7 +113,7 @@ export async function setIsRecyclable(barcode, isRecyclable) {
     }
 
     await firestore()
-        .collection('recyclables').doc(barcode).set({recyclable: isRecyclable});
+        .collection('recyclables').doc(barcode).set({name: documentSnapshot.data().name, recyclable: isRecyclable});
 
     return true;
 }

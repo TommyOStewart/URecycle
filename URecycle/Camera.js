@@ -32,7 +32,7 @@ export class Camera extends Component {
 
 
     async onBarCodeRead(scanResult) {
-        if (scanResult.data != null) {
+        if (this.state.declineModal === false && this.state.acceptModal === false) {
 
             console.log("CAMERA:", this.props.username);
 
@@ -41,6 +41,11 @@ export class Camera extends Component {
                 this.setState({
                     acceptModal: true,
                 })
+                let points = await getPoints(this.props.username);
+                let set = await setPoints(this.props.username, points + 5);
+                console.log("Before, After", points, set);
+
+
             }
             else{
                 this.setState({
