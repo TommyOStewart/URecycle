@@ -10,6 +10,8 @@ import React from 'react';
 
 import Stories from './app/routes/Stories';
 
+import Bottle from './app/routes/Bottle';
+
 import Me from './app/routes/Me';
 import Menu from './app/components/Menu';
 
@@ -241,6 +243,7 @@ class App extends React.Component {
               {component: Redeem},
               {component: SubMenu},
               {component: Stories},
+              {component: Bottle}
           ]}
           initialIndex={2}
           username={this.props.navigation.state.params.username}/>
