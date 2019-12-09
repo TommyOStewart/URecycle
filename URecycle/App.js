@@ -243,7 +243,7 @@ class App extends React.Component {
               {component: Stories},
               {component: Bottle}
           ]}
-          initialIndex={2}
+          initialIndex={1}
           username={this.props.navigation.state.params.username}/>
 
         );
