@@ -7,14 +7,25 @@ export default class Me extends Component{
   constructor(props) {
     super(props);
     this.state = {
-        myText: 0,
+        points: 0,
         acceptModal: false,
         declineModal: false
-    }
+    };
+    this.pointUpdater();
 }
 
 updatePoint = async() => {
-  this.setState({myText: await getPoints(this.props.username)})
+  this.setState({points: await getPoints(this.props.username)})
+};
+
+async pointUpdater() {
+
+      setInterval(async () => {
+          let points = await getPoints(this.props.username);
+          this.setState({points: points});
+          console.log(points);
+      }, 500);
+
 }
 
   render(){
@@ -24,14 +35,14 @@ updatePoint = async() => {
         <Image style={styles.imgprofile} source={{uri:'http://cdn.onlinewebfonts.com/svg/img_411978.png'}}/>
         <Text style={styles.text}>Welcome back, {this.props.username}</Text>
         <Text style={styles.text} onPress = {this.updatePoint}>
-               {this.state.myText} points </Text>
-        <Dash style={{width:1000, height:2, padding: 20}}/>  
+               {this.state.points} points </Text>
+        <Dash style={{width:1000, height:2, padding: 20}}/>
         <Text>UserName : {this.props.username}</Text>
-        <Dash style={{width:1000, height:2, padding: 20}}/>  
+        <Dash style={{width:1000, height:2, padding: 20}}/>
         <Text>Password: ***********</Text>
-        <Dash style={{width:1000, height:2, padding: 20}}/> 
+        <Dash style={{width:1000, height:2, padding: 20}}/>
         <Text>Language: English</Text>
-        <Dash style={{width:1000, height:2, padding: 20, marginBottom: 40}}/> 
+        <Dash style={{width:1000, height:2, padding: 20, marginBottom: 40}}/>
         <TouchableOpacity style={styles.Loginbutton}>
         <Text>Change Password</Text>
         </TouchableOpacity>
@@ -39,7 +50,9 @@ updatePoint = async() => {
         <TouchableOpacity style={styles.Loginbutton}>
         <Text>Change UserName</Text>
         </TouchableOpacity>
+
       </ScrollView>
+
     )
   }
 }

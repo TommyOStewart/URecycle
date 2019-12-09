@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, Dimensions, View, StyleSheet } from 'react-native';
+import {ScrollView, Dimensions, View, StyleSheet, InteractionManager} from 'react-native';
 import PropTypes from 'prop-types';
 
 const window = Dimensions.get('window');
@@ -34,28 +34,38 @@ class Menu extends Component {
     routes: PropTypes.array,
     horizontal: PropTypes.bool,
     initialIndex: PropTypes.number,
-  }
+  };
 
   static defaultProps = {
     routes: [],
     horizontal: true,
-    initialIndex: 0,
-  }
+    initialIndex: 1,
+  };
 
   constructor(props) {
     super(props);
-    this._scrollView = null;
 
   }
 
   componentDidMount() {
-    if (this.props.horizontal) {
-      const offset = window.width * this.props.initialIndex;
-      this._scrollView.scrollTo({ x: offset, animated: false });
-    } else {
-      const offset = window.height * this.props.initialIndex;
-      this._scrollView.scrollTo({ y: offset, animated: false });
-    }
+
+
+  }
+
+  goTo() {
+
+
+    InteractionManager.runAfterInteractions(() => {
+
+      if (this.props.horizontal) {
+        const offset = window.width * this.props.initialIndex;
+        setTimeout(() => {this.myScroll.scrollTo({x: offset, y: 0, animated: false})}, 0)
+      } else {
+        const offset = window.height * this.props.initialIndex;
+        setTimeout(() => {this.myScroll.scrollTo({x: 0, y: offset, animated: false})}, 0)
+      }
+
+    });
   }
 
   renderScreens() {
@@ -67,7 +77,9 @@ class Menu extends Component {
         <View key={index} style={itemStyle}>
           <route.component username={this.props.username}/>
         </View>
+
       );
+
     });
   }
 
@@ -76,21 +88,21 @@ class Menu extends Component {
     const scrollViewStyle = horizontal ? styles.scrollView : styles.scrollViewVertical;
 
     return (
-      <View style={styles.container}>
+
         <ScrollView
-          ref={(c) => this._scrollView = c}
+          ref={(ref) => this.myScroll = ref}
           horizontal={horizontal}
-          pagingEnabled
+          pagingEnabled={true}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
           style={scrollViewStyle}
-          scrollEventThrottle={32}
           bounces={false}
           directionalLockEnabled={true}
+          onLayout={this.goTo()}
         >
           {this.renderScreens()}
         </ScrollView>
-      </View>
+
     );
   }
 }

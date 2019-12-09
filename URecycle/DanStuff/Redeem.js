@@ -4,6 +4,7 @@ import Modal, {ModalContent, ModalTitle} from "react-native-modals";
 import ModalFooter from "react-native-modals/dist/components/ModalFooter";
 import ModalButton from "react-native-modals/dist/components/ModalButton";
 import {getPoints, setPoints} from "../Database";
+import Dash from "react-native-dash";
 
 export default class Redeem extends React.Component {
     constructor(props) {
@@ -92,6 +93,7 @@ export default class Redeem extends React.Component {
                     <Button title={'Redeem'} onPress={_ => this.onButtonPressHat()} />
                 </TouchableOpacity>
 
+                <Dash style={{width:1000, height:2, padding: 20}}/>
                 <Image style={styles.image} source={require('./discount.png')}/>
                 <Text style={styles.text}>
                     Select Store Discounts*
@@ -103,6 +105,7 @@ export default class Redeem extends React.Component {
                     <Button title={'Redeem'} onPress={_ => this.onButtonPressDiscount()} />
                 </TouchableOpacity>
 
+                <Dash style={{width:1000, height:2, padding: 20}}/>
                 <Image style={styles.image} source={require('./giftcard.png')}/>
                 <Text style={styles.text}>
                     Select Store Giftcards*
@@ -114,6 +117,7 @@ export default class Redeem extends React.Component {
                     <Button title={'Redeem'} onPress={_ => this.onButtonPressCard()} />
                 </TouchableOpacity>
 
+                <Dash style={{width:1000, height:2, padding: 20}}/>
                 <Image style={styles.image} source={require('./raffle.png')}/>
                 <Text style={styles.text}>
                     Raffle Entry
@@ -135,7 +139,7 @@ export default class Redeem extends React.Component {
                     }}
                     modalTitle={
                         <ModalTitle
-                            title="Congratulation!"
+                            title="Congratulations!"
                             align="left"
                         />
                     }
@@ -193,10 +197,6 @@ export default class Redeem extends React.Component {
                     </ModalContent>
                 </Modal>
 
-                <TouchableOpacity style={styles.backbutton}>
-                    <Button style={styles.buttonText} onPress={this.goBack()} title={'Back'}/>
-                </TouchableOpacity>
-
                 {/*Bottom Buffer Text*/}
                 <Text style={styles.text}>
 
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
         width: 256,
     },
     button: {
-        backgroundColor: '#00b33c',
+        // backgroundColor: '#00b33c',
         paddingVertical: 10,
         paddingHorizontal: 50
     },
