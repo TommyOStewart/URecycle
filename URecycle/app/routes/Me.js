@@ -11,6 +11,7 @@ export default class Me extends Component{
         acceptModal: false,
         declineModal: false
     };
+    this.updatePoint();
     this.pointUpdater();
 }
 
@@ -23,7 +24,7 @@ async pointUpdater() {
       setInterval(async () => {
           let points = await getPoints(this.props.username);
           this.setState({points: points});
-      }, 500);
+      }, 5000);
 
 }
 
@@ -41,14 +42,6 @@ async pointUpdater() {
         <Text>Password: ***********</Text>
         <Dash style={{width:1000, height:2, padding: 20}}/>
         <Text>Language: English</Text>
-        <Dash style={{width:1000, height:2, padding: 20, marginBottom: 40}}/>
-        <TouchableOpacity style={styles.Loginbutton}>
-        <Text>Change Password</Text>
-        </TouchableOpacity>
-        <Text style= {{padding: 5}}></Text>
-        <TouchableOpacity style={styles.Loginbutton}>
-        <Text>Change UserName</Text>
-        </TouchableOpacity>
 
       </ScrollView>
 
