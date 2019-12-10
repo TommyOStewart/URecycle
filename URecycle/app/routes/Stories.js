@@ -34,38 +34,6 @@ export default class Stories extends Component {
     render() {
         return (
             <ScrollView style={styles.container}>
-                <TouchableOpacity>
-                    <SearchableDropdown
-                        onTextChange={text => console.log(text)}
-                        onItemSelect={item => console.log(item)}
-                        containerStyle={{padding: 5}}
-                        textInputStyle={{
-                            padding: 12,
-                            borderWidth: 1,
-                            borderColor: '#ccc',
-                            backgroundColor: '#FAF7F6',
-                            color: 'black',
-                        }}
-                        itemStyle={{
-                            padding: 10,
-                            marginTop: 2,
-                            backgroundColor: '#FAF9F8',
-                            borderColor: '#bbb',
-                            borderWidth: 1,
-                        }}
-                        itemTextStyle={{
-                            color: '#222',
-                        }}
-                        itemsContainerStyle={{
-                            maxHeight: '60%',
-                        }}
-                        items={items}
-                        defaultIndex={1}
-                        placeholder="Search"
-                        resetValue={false}
-                        underlineColorAndroid="transparent"
-                    />
-                </TouchableOpacity>
 
                 <TouchableOpacity style={styles.card} onPress={() => {
                     Linking.openURL('https://homeguides.sfgate.com/ten-steps-start-recycling-79791.html')

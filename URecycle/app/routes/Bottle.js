@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {StyleSheet, TouchableOpacity, Text, ScrollView} from 'react-native';
+import React, {Component, Fragment} from 'react';
+import {StyleSheet, TouchableOpacity, Text, ScrollView, View, TextInput} from 'react-native';
 import SearchableDropdown from 'react-native-searchable-dropdown';
 
 
@@ -11,41 +11,32 @@ var items = [
 ];
 
 export default class Bottle extends Component {
-    render() {
-        return (
-            <ScrollView style={styles.container}>
-                <TouchableOpacity onPress={() => navigate('Home', {navigation: this.props.navigation})}>
-                    <SearchableDropdown
-                        onTextChange={text => console.log(text)}
-                        onItemSelect={item => console.log(item)}
-                        containerStyle={{padding: 5}}
-                        textInputStyle={{
-                            padding: 12,
-                            borderWidth: 1,
-                            borderColor: '#ccc',
-                            backgroundColor: '#F5F5F5',
-                            color: 'black'
-                        }}
-                        itemStyle={{
-                            padding: 10,
-                            marginTop: 2,
-                            backgroundColor: '#FAF9F8',
-                            borderColor: '#bbb',
-                            borderWidth: 1,
-                        }}
-                        itemTextStyle={{
-                            color: '#222',
-                        }}
-                        itemsContainerStyle={{
-                            maxHeight: '60%',
-                        }}
-                        items={items}
-                        defaultIndex={1}
-                        placeholder="Search"
-                        resetValue={false}
-                        underlineColorAndroid="transparent"
-                    />
-                    <TouchableOpacity style={styles.card}>
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedItem: ''
+        }
+    }
+
+    onChange(text) {
+        this.setState({selectedItem: text});
+        console.log(text);
+        console.log('bottle (plastic)'.includes(text.toLowerCase()) );
+        console.log(text === '');
+        console.log(('bottle (plastic)'.includes(text.toLowerCase()) || text === ''));
+    }
+
+    renderPlasticBottle() {
+        if (('bottle (plastic)'.includes(this.state.selectedItem.toLowerCase()) || this.state.selectedItem === '')) {
+            return (
+                <View >
+                    {/*Buffer*/}
+                    <Text>
+
+
+                    </Text>
+                    <TouchableOpacity style={styles.card} >
                         <Text style={styles.cardText}>Name</Text>
                         <Text style={styles.bottleText}>
                             Plastic Bottle</Text>
@@ -63,15 +54,118 @@ export default class Bottle extends Component {
                         <TouchableOpacity style={styles.smallCard}>
                             <Text style={styles.cardText}>Recycle Information</Text>
                             <Text style={styles.regularText}>The first PET disposable was introduced in 1975</Text>
-                            <Text style={styles.regularText}>MYTH: Plastic bottles cannot be recycled into new plastic
+                            <Text style={styles.regularText}>MYTH: Plastic bottles cannot be recycled into new
+                                plastic
                                 bottles</Text>
                         </TouchableOpacity>
                     </TouchableOpacity>
-                </TouchableOpacity>
-            </ScrollView>
+                </View>
+            );
+        } else {
+            return null;
+        }
+    }
+
+    renderGlassBottle() {
+        if (('bottle (glass)'.includes(this.state.selectedItem.toLowerCase()) || this.state.selectedItem === '')) {
+            return (
+                <View >
+                    {/*Buffer*/}
+                    <Text>
+
+
+                    </Text>
+                    <TouchableOpacity style={styles.card} >
+                        <Text style={styles.cardText}>Name</Text>
+                        <Text style={styles.bottleText}>
+                            Glass Bottle</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.card}>
+                        <Text style={styles.informationText}>INFORMATION</Text>
+                        <TouchableOpacity style={styles.smallGreenCard}>
+                            <Text style={styles.cardText}>Recyclable?</Text>
+                            <Text style={styles.bottleText}>Yes</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.smallCard}>
+                            <Text style={styles.cardText}>Points to Gain</Text>
+                            <Text style={styles.bottleText}>5 for Recycling</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.smallCard}>
+                            <Text style={styles.cardText}>Recycle Information</Text>
+                            <Text style={styles.regularText}>Glass is 100% recyclable and can be recycled endlessly without loss in quality or purity</Text>
+                            <Text style={styles.regularText}>MYTH: Broken glass cannot be recycled... (it can)</Text>
+                        </TouchableOpacity>
+                    </TouchableOpacity>
+                </View>
+            );
+        } else {
+            return null;
+        }
+    }
+
+    renderCardboardBottle() {
+        if (('cardboard'.includes(this.state.selectedItem.toLowerCase()) || this.state.selectedItem === '')) {
+            return (
+                <View >
+                    {/*Buffer*/}
+                    <Text>
+
+
+                    </Text>
+                    <TouchableOpacity style={styles.card} >
+                        <Text style={styles.cardText}>Name</Text>
+                        <Text style={styles.bottleText}>
+                            Cardboard</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.card}>
+                        <Text style={styles.informationText}>INFORMATION</Text>
+                        <TouchableOpacity style={styles.smallGreenCard}>
+                            <Text style={styles.cardText}>Recyclable?</Text>
+                            <Text style={styles.bottleText}>Yes</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.smallCard}>
+                            <Text style={styles.cardText}>Points to Gain</Text>
+                            <Text style={styles.bottleText}>5 for Recycling</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.smallCard}>
+                            <Text style={styles.cardText}>Recycle Information</Text>
+                            <Text style={styles.regularText}>Recycling 1 ton of cardboard saves 46 gallons of oil</Text>
+                            <Text style={styles.regularText}>MYTH: Pizza boxes can't be recycled... (They can as long as they are grease free!)</Text>
+                        </TouchableOpacity>
+                    </TouchableOpacity>
+                </View>
+            );
+        } else {
+            return null;
+        }
+    }
+
+    render() {
+        return (
+            <Fragment>
+                {/*<TouchableOpacity onPress={() => navigate('Home', {navigation: this.props.navigation})}>*/}
+                <TextInput
+                    placeholder="Search"
+                    placeholderTextColor="#000000"
+                    returnKeyType="next"
+                    autoCorrect={false}
+                    style={styles.input}
+                    onChangeText={text => this.onChange(text)}
+                />
+
+                <ScrollView style={styles.container}>
+                    {/*Plastic Bottle*/}
+                    {this.renderPlasticBottle()}
+                    {this.renderGlassBottle()}
+                    {this.renderCardboardBottle()}
+                    {/*</TouchableOpacity>*/}
+                </ScrollView>
+            </Fragment>
         );
     }
 }
+
+
 const styles = StyleSheet.create({
     container: {
         marginTop: 20,
@@ -88,6 +182,15 @@ const styles = StyleSheet.create({
         borderColor: '#d6d7da',
         marginTop: 30,
         backgroundColor: '#228B22',
+    },
+    input: {
+        height: 50,
+        width: '95%',
+        backgroundColor: '#F5F5F5',
+        left: '2.5%',
+        right: '2.5%',
+        color: 'black',
+        paddingHorizontal: 10
     },
     smallCard: {
         backgroundColor: '#fff',
@@ -124,7 +227,7 @@ const styles = StyleSheet.create({
         letterSpacing: 2
     },
     informationText: {
-        fontSize: 24,
+        fontSize: 20,
         fontWeight: 'bold'
     },
     regularText: {
