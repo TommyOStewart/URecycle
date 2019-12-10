@@ -24,7 +24,7 @@ async pointUpdater() {
       setInterval(async () => {
           let points = await getPoints(this.props.username);
           this.setState({points: points});
-      }, 5000);
+      }, 500);
 
 }
 
