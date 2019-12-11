@@ -51,6 +51,9 @@ class SubMenu extends React.Component {
                 initialIndex={0}
                 horizontal={false}
                 username={this.props.username}
+                rewards={this.props.rewards}
+                scan={this.props.scan}
+                news={this.props.news}
             />
         );
     }

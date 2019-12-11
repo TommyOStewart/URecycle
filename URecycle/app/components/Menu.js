@@ -53,10 +53,7 @@ class Menu extends Component {
   }
 
   goTo() {
-
-
     InteractionManager.runAfterInteractions(() => {
-
       if (this.props.horizontal) {
         const offset = window.width * this.props.initialIndex;
         setTimeout(() => {this.myScroll.scrollTo({x: offset, y: 0, animated: false})}, 0)
@@ -68,6 +65,30 @@ class Menu extends Component {
     });
   }
 
+  goToRewards() {
+      if (typeof this.props.rewards === 'undefined') {
+          setTimeout(() => {this.myScroll.scrollTo({x: 0, y: 0, animated: true})}, 0)
+      } else {
+          this.props.rewards();
+      }
+
+
+  }
+
+  goToScan() {
+      setTimeout(() => {this.myScroll.scrollTo({x: window.width, y: window.height, animated: true})}, 0)
+
+  }
+
+  goToNews() {
+
+      if (typeof this.props.news === 'undefined') {
+          setTimeout(() => {this.myScroll.scrollTo({x: window.width * 2, y: 0, animated: true})}, 0);
+      } else {
+          this.props.news();
+      }
+  }
+
   renderScreens() {
     const { horizontal, routes } = this.props;
     const itemStyle = horizontal ? styles.item : styles.verticalItem;
@@ -75,7 +96,7 @@ class Menu extends Component {
     return this.props.routes.map((route, index) => {
       return (
         <View key={index} style={itemStyle}>
-          <route.component username={this.props.username}/>
+          <route.component username={this.props.username} rewards={this.goToRewards.bind(this)} scan={this.goToScan.bind(this)} news={this.goToNews.bind(this)}/>
         </View>
 
       );
